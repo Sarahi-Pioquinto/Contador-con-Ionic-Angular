@@ -6,7 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  counter :number=0;
+//databinding
 
-  constructor() {}
+  constructor() {  }
+  incrementar(){
+    console.log("El boton ha sido presionado")
+    this.counter++;
+
+  }
+  disminuir(){
+    console.log("El boton ha sido presionado")
+    this.counter--;
+
+  }
+  reset(){
+    this.counter=0;
+  }
 
 }

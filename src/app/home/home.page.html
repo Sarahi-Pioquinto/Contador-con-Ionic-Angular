@@ -1,20 +1,43 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
     <ion-title>
-      Blank
+      My first APP
     </ion-title>
+
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+
+      <ion-title size="large">My first App</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+
+    <ion-title>Contador</ion-title>
+    <p>{{counter}}</p>
+
+
+
+    <ion-button (click)="reset()">Reiniciar</ion-button>
+    <br>
+    <ion-button color="success" (click)="incrementar()">Incrementar</ion-button>
+    <br>
+    <ion-button color="warning" (click)="disminuir()">Disminuir</ion-button>
+
+    <ion-button color="danger" *ngIf="counter > 10" >Exeso de clicks</ion-button>
+
+
+
   </div>
 </ion-content>
